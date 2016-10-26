@@ -31,7 +31,7 @@ Pagina para cadastrar descontos no IUGU e no Postgres
       }
 
       function calcular(){
-        var d = parseint(document.getElementById("discount").value);
+        var d = parseInt(document.getElementById("discount").value);
         
         if(d){
           document.getElementById("value").value = valorAnual*((100-d)/100);
