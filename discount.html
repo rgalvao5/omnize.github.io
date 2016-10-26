@@ -8,9 +8,15 @@ Pagina para cadastrar descontos no IUGU e no Postgres
       var valorMensal = 35;
     
       function sendPost(){
+        var p = document.getElementById("plan").value;
+        var n = document.getElementById("name").value;
+        var pr = document.getElementById("period").value;
+        var v = document.getElementById("value").value.replace(".","");        
+        v = v+"0000".substr(0,4-v.length);
+        
         var http = new XMLHttpRequest();
         var url = "https://ca1vsqktff.execute-api.us-east-1.amazonaws.com/prod/insertplans";
-        var params = "{}";
+        var params = {"plan":""+p+"","name":""+n+"","value":""+v+"", "intervalType":""+pr+""};
         var auth = "{\"user\":\""+document.getElementById('user').value+"\",\"pass\":\""+document.getElementById('pass').value+"\"}";
         http.open("POST", url, true);
         http.setRequestHeader("Content-type", "application/json");
@@ -28,27 +34,38 @@ Pagina para cadastrar descontos no IUGU e no Postgres
         sendPost();
       }
       function calcular(){
-        var d = parseInt(document.getElementById("discount").value);
         
-        if(d){
-          document.getElementById("value").value = valorAnual*((100-d)/100);
+        var period = document.getElementById("period").value;
+        
+        var d = parseInt(document.getElementById("discount").value);
+        var valor = valorMensal;
+        if(period=="ANNUALLY"){
+          valor = valorAnual;
         }
         
+        if(d){
+          document.getElementById("value").value = valor*((100-d)/100);
+        }        
       }
     </script>
   </head>
   <body>
     usuário:<input type="text" id="user" />
-    Senha:<input type="text" id="pass" />
+    <br/>
+    Senha:<input type="password" id="pass" />
     <br/>
     <hr/>
-    Cupom:<input type="text" id="plan" />
-    Nome:<input type="text" id="name" />
-    Periodo:
-    
-    Desconto:<input type="text" id="discount" /> - <input type="text" id="value" /> <a href="#" onclick="calcular()" > Calcular </a>
-    
-    
+    Cupom:<input type="text" id="plan" /><br/> 
+    Nome:<input type="text" id="name" /><br/> 
+    Período:<select id="period">
+      <option value="ANNUALLY">Anual</option>
+      <option value="MONTHLY">Mensal</option>
+    </select>
+    <br/>
+
+    Desconto:<input type="text" id="discount" />% &nbsp; = &nbsp;<input type="text" id="value" />&nbsp;<a href="#" onclick="calcular()" > Calcular </a>
+    <br/>
+    <hr/>    
     <a href="#" onclick="sendDescount()" > Salvar </a>
     
   </body>
