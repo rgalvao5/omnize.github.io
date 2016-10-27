@@ -45,6 +45,7 @@ Pagina para cadastrar descontos no IUGU e no Postgres
         
         if(d){
           document.getElementById("value").value = valor*((100-d)/100);
+          document.getElementById("value").value = document.getElementById("value").value.substr(0,5);
         }        
       }
     </script>
