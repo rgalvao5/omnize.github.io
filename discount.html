@@ -52,20 +52,22 @@ Pagina para cadastrar descontos no IUGU e no Postgres
   <body>
     usuário:<input type="text" id="user" />
     <br/>
+    <br/>
     Senha:<input type="password" id="pass" />
     <br/>
     <hr/>
-    Cupom:<input type="text" id="plan" /><br/> 
-    Nome:<input type="text" id="name" /><br/> 
+    Cupom:<input type="text" id="plan" /><br/> <br/>
+    Nome:<input type="text" id="name" /><br/> <br/>
     Período:<select id="period">
       <option value="ANNUALLY">Anual</option>
       <option value="MONTHLY">Mensal</option>
     </select>
-    <br/>
+    <br/><br/>
 
-    Desconto:<input type="text" id="discount" />% &nbsp; = &nbsp;<input type="text" id="value" />&nbsp;<a href="#" onclick="calcular()" > Calcular </a>
+    Desconto:<input type="text" id="discount" />% &nbsp; = &nbsp;<input type="text" id="value" size="6" maxlength="5" />&nbsp;<a href="#" onclick="calcular()" > Calcular </a>
     <br/>
     <hr/>    
+    <br/>
     <a href="#" onclick="sendDescount()" > Salvar </a>
     
   </body>
