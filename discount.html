@@ -16,7 +16,7 @@ Pagina para cadastrar descontos no IUGU e no Postgres
         
         var http = new XMLHttpRequest();
         var url = "https://ca1vsqktff.execute-api.us-east-1.amazonaws.com/prod/insertplans";
-        var params = {"plan":""+p+"","name":""+n+"","value":""+v+"", "intervalType":""+pr+""};
+        var params = "{\"plan\":\""+p+"\",\"name\":\""+n+"\",\"value\":\""+v+"\", \"intervalType\":\""+pr+"\"}";
         var auth = "{\"user\":\""+document.getElementById('user').value+"\",\"pass\":\""+document.getElementById('pass').value+"\"}";
         http.open("POST", url, true);
         http.setRequestHeader("Content-type", "application/json");
@@ -26,7 +26,7 @@ Pagina para cadastrar descontos no IUGU e no Postgres
                 alert(http.responseText);
             }
         }
-        http.send(params.toString());
+        http.send(params);
       }
       
       function sendDescount(){
