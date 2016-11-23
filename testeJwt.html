@@ -1,0 +1,53 @@
+<html>
+<head>
+  <script>
+      var url_token = "https://qrnawupi96.execute-api.us-east-1.amazonaws.com/test/gettoken";
+      var url_data = "https://qrnawupi96.execute-api.us-east-1.amazonaws.com/test/";
+      
+      function post(http, method,url, params, func_ret){
+        
+        var auth = "";
+        http.open(method, url, true);
+        http.setRequestHeader("Content-type", "application/json");
+        
+        http.onreadystatechange = function() {
+            if(http.readyState == 4 && http.status == 200) {
+                func_ret(http.responseText);
+            }
+        }
+        http.send(params);
+     }
+     
+     function getToken(){
+      var http = new XMLHttpRequest();
+      post(http, "GET",url_token,"{}",getTokenCallback)
+     }
+
+     function getTokenCallback(text){
+        alert(text);
+        document.getElementById("token").value = text.token;
+     }
+
+     function getData(accId, auth){
+      var http = new XMLHttpRequest();
+      http.setRequestHeader("Authorization", auth);
+      var u = url_data+accId;
+      post(http, "POST",u,"{}",getDataCallback);
+     }
+
+     function getDataCallback(text){
+        alert(text);
+     }
+     
+  </script>
+</head>
+
+<body>
+  <input type="button" onclick="getToken();"/>
+  <br/>
+  <input type="text" id="token"/>
+  <br/>
+  <input type="button" onclick="getData(1,document.getElementById("token").value);"/>
+</body>
+
+</html>
