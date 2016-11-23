@@ -17,6 +17,9 @@
             if(http.readyState == 4 && http.status == 200) {
                 func_ret(http.responseText);
             }else{
+              if(http.readyState == 4 && http.status == 0){
+                func_ret("Nao Autorizado");
+              }
               console.log(http.readyState, http.status);
             }
           
@@ -40,18 +43,20 @@
      }
 
      function getDataCallback(text){
-        alert(text);
+        document.getElementById("token").innerTEXT = text;
      }
      
   </script>
 </head>
 
 <body>
-  <input type="button" onclick="getToken();"/>
+  <input type="button" value="Gerar Token" onclick="getToken();"/>
   <br/>
-  <input type="text" id="token"/>
+  <input type="text" id="token" size="1024"/>
   <br/>
-  <input type="button" onclick="getData(1,document.getElementById('token').value);"/>
+  <input type="button" value="Pegar dados" onclick="getData(1,document.getElementById('token').value);"/>
+  <div id="data">
+  </div>
 </body>
 
 </html>
