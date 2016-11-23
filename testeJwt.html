@@ -28,6 +28,7 @@
      }
      
      function getToken(){
+       document.getElementById("token").value = "Processando";
       post("GET",url_token,"{}",getTokenCallback)
      }
 
@@ -36,6 +37,7 @@
      }
 
      function getData(accId, auth){
+       document.getElementById("data").innerText = "Processando";
       var u = url_data+accId;
       console.log(u);
       console.log(auth);
