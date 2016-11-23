@@ -54,7 +54,8 @@
   <br/>
   <input type="text" id="token" size="1024"/>
   <br/>
-  <input type="button" value="Pegar dados" onclick="getData(1,document.getElementById('token').value);"/>
+  <input type="text" id="account" size="10"/>
+  <input type="button" value="Pegar dados" onclick="getData(document.getElementById('account').value,document.getElementById('token').value);"/>
   <div id="data">
   </div>
 </body>
