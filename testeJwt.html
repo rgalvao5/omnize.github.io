@@ -4,10 +4,14 @@
       var url_token = "https://qrnawupi96.execute-api.us-east-1.amazonaws.com/test/gettoken";
       var url_data = "https://qrnawupi96.execute-api.us-east-1.amazonaws.com/test/";
       
-      function post(http, method,url, params, func_ret){
+      function post(http, method,url, params, func_ret, auth){
+        var http = new XMLHttpRequest();
         
         var auth = "";
         http.open(method, url, true);
+        if(auth)
+          http.setRequestHeader("Authorization", auth);
+
         http.setRequestHeader("Content-type", "application/json");
         
         http.onreadystatechange = function() {
@@ -22,21 +26,17 @@
      }
      
      function getToken(){
-      var http = new XMLHttpRequest();
-      post(http, "GET",url_token,"{}",getTokenCallback)
+      post("GET",url_token,"{}",getTokenCallback)
      }
 
      function getTokenCallback(text){
-        alert(text);
         document.getElementById("token").value = JSON.parse(text).token;
      }
 
      function getData(accId, auth){
-      var http = new XMLHttpRequest();
-      http.setRequestHeader("Authorization", auth);
       var u = url_data+accId;
       console.log(u);
-      post(http, "POST",u,"{}",getDataCallback);
+      post("POST",u,"{}",getDataCallback,auth);
      }
 
      function getDataCallback(text){
