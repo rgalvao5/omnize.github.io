@@ -53,11 +53,9 @@
 
 <body>
   <input type="button" value="Gerar Token" onclick="getToken();"/>
-  <br/>
-  <input type="text" id="token" size="140"/>
-  <br/><hr/><br/>
-  <input type="text" id="account" size="2"/>
-  <br/>
+  Token:<input type="text" id="token" size="140"/>
+  <br/><br/>
+  Conta:<input type="text" id="account" size="2"/>
   <input type="button" value="Pegar dados" onclick="getData(document.getElementById('account').value,document.getElementById('token').value);"/>
   <br/><br/>
   <div id="data">
