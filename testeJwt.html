@@ -13,7 +13,10 @@
         http.onreadystatechange = function() {
             if(http.readyState == 4 && http.status == 200) {
                 func_ret(http.responseText);
+            }else{
+              console.log(http.readyState, http.status);
             }
+          
         }
         http.send(params);
      }
@@ -32,6 +35,7 @@
       var http = new XMLHttpRequest();
       http.setRequestHeader("Authorization", auth);
       var u = url_data+accId;
+      console.log(u);
       post(http, "POST",u,"{}",getDataCallback);
      }
 
