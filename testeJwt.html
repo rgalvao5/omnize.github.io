@@ -36,6 +36,7 @@
      function getData(accId, auth){
       var u = url_data+accId;
       console.log(u);
+      console.log(auth);
       post("POST",u,"{}",getDataCallback,auth);
      }
 
