@@ -25,7 +25,7 @@
 
      function getTokenCallback(text){
         alert(text);
-        document.getElementById("token").value = text.token;
+        document.getElementById("token").value = JSON.parse(text).token;
      }
 
      function getData(accId, auth){
