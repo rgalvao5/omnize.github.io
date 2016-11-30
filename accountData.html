@@ -16,7 +16,7 @@
         http.setRequestHeader("Authorization", auth);
         http.onreadystatechange = function() {
             if(http.readyState == 4 && http.status == 200) {
-                document.getElementById("data").innerHTML(http.responseText);
+                document.getElementById("dataDiv").innerHTML(http.responseText);
             }
         }
         http.send(params);
@@ -35,7 +35,7 @@
     <br/>
     <hr/>
     Email:<input type="text" id="email" /><br/> <br/>
-    Dados:<div id="data" ></div><br/> <br/>    
+    Dados:<div id="dataDiv" ></div><br/> <br/>    
     <br/>
     <hr/>    
     <br/>
