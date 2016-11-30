@@ -16,7 +16,7 @@
         http.setRequestHeader("Authorization", auth);
         http.onreadystatechange = function() {
             if(http.readyState == 4 && http.status == 200) {
-                document.getElementById("data").innerText(http.responseText);
+                document.getElementById("data").innerHTML(http.responseText);
             }
         }
         http.send(params);
@@ -39,9 +39,8 @@
     <br/>
     <hr/>    
     <br/>
-    <a href="#" onclick="sendDescount()" > Salvar </a>
+    <a href="#" onclick="sendDescount()" > Pegar Dados </a>
     
   </body>
 
 </html>
-Contact GitHub 
