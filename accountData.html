@@ -16,7 +16,7 @@
         http.setRequestHeader("Authorization", auth);
         http.onreadystatechange = function() {
             if(http.readyState == 4 && http.status == 200) {
-                data.innerText(http.responseText);
+                document.getElementById("data").innerText(http.responseText);
             }
         }
         http.send(params);
