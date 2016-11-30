@@ -16,7 +16,7 @@
         http.setRequestHeader("Authorization", auth);
         http.onreadystatechange = function() {
             if(http.readyState == 4 && http.status == 200) {
-                document.getElementById("retorno").innerText = JSON.parse(http.responseText).entity;
+                document.getElementById("retorno").innerText = JSON.stringify(JSON.parse(http.responseText).entity);
             }
         }
         http.send(params);
