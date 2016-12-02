@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Omnize Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+  </head>
+  <body>
+    <button id="init">Iniciar chat</button>
+    <script type="text/javascript">
+      var $init = document.getElementById('init');
+
+      $init.addEventListener('click', function() {
+        var JSLink = 'https://s3.amazonaws.com/omz-widget-dev/js/widget.js';
+        var JSElement = document.createElement('script');
+
+        JSElement.async=!0;
+        JSElement.charset='UTF-8';
+        JSElement.src=JSLink;
+        JSElement.onload=OnceLoaded;
+        document.getElementsByTagName('body')[0].appendChild(JSElement);
+
+        function OnceLoaded() {
+          wOmz.init({id:1392});
+          wOmz.UTIL.maximize();
+          wOmz.UTIL.initCall('CHAT');
+        }
+      });
+    </script>
+  </body>
+</html>
+
