@@ -1,0 +1,65 @@
+<html>
+<head>
+  <script>
+      var url_token = "https://qrnawupi96.execute-api.us-east-1.amazonaws.com/test/gettoken";
+      var url_data = "https://qrnawupi96.execute-api.us-east-1.amazonaws.com/test/";
+      
+      function post(method,url, params, func_ret, auth){
+        var http = new XMLHttpRequest();
+        
+        http.open(method, url, true);
+        if(auth)
+          http.setRequestHeader("Authorization", auth);
+
+        http.setRequestHeader("Content-type", "application/json");
+        
+        http.onreadystatechange = function() {
+            if(http.readyState == 4 && http.status == 200) {
+                func_ret(http.responseText);
+            }else{
+              if(http.readyState == 4 && http.status == 0){
+                func_ret("Nao Autorizado");
+              }
+              console.log(http.readyState, http.status);
+            }
+          
+        }
+        http.send(params);
+     }
+     
+     function getToken(){
+       document.getElementById("token").value = "Processando";
+      post("GET",url_token,"{}",getTokenCallback)
+     }
+
+     function getTokenCallback(text){
+        document.getElementById("token").value = JSON.parse(text).token;
+     }
+
+     function getData(accId, auth){
+       document.getElementById("data").innerText = "Processando";
+      var u = url_data+accId;
+      console.log(u);
+      console.log(auth);
+      post("POST",u,"{}",getDataCallback,auth);
+     }
+
+     function getDataCallback(text){
+        document.getElementById("data").innerText = text;
+     }
+     
+  </script>
+</head>
+
+<body>
+  <input type="button" value="Gerar Token" onclick="getToken();"/>
+  Token:<input type="text" id="token" size="140"/>
+  <br/><br/>
+  Conta:<input type="text" id="account" size="2"/>
+  <input type="button" value="Pegar dados" onclick="getData(document.getElementById('account').value,document.getElementById('token').value);"/>
+  <br/><br/>
+  <div id="data">
+  </div>
+</body>
+
+</html>

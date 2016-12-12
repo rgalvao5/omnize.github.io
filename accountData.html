@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script>
+      var valorAnual = 29;
+      var valorMensal = 35;
+    
+      function sendPost(){
+        var p = document.getElementById("email").value;
+        
+        var http = new XMLHttpRequest();
+        var url = "https://ca1vsqktff.execute-api.us-east-1.amazonaws.com/test/getdataaccount";
+        var params = "{\"email\":\""+p+"\"}";
+        var auth = "{\"user\":\""+document.getElementById('user').value+"\",\"pass\":\""+document.getElementById('pass').value+"\"}";
+        http.open("POST", url, true);
+        http.setRequestHeader("Content-type", "application/json");
+        http.setRequestHeader("Authorization", auth);
+        http.onreadystatechange = function() {
+            if(http.readyState == 4 && http.status == 200) {
+                document.getElementById("retorno").innerText = JSON.stringify(JSON.parse(http.responseText).entity);
+            }
+        }
+        http.send(params);
+      }
+      
+      function sendDescount(){
+        sendPost();
+      }
+    </script>
+  </head>
+  <body>
+    usuário:<input type="text" id="user" />
+    <br/>
+    <br/>
+    Senha:<input type="password" id="pass" />
+    <br/>
+    <hr/>
+    Email:<input type="text" id="email" /><br/> <br/>
+    Dados:<div id="retorno" ></div>
+    <br/>
+    <hr/>    
+    <br/>
+    <a href="#" onclick="sendDescount()" > Pegar Dados </a>
+    
+  </body>
+
+</html>
