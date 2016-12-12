@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <a href="./teste2.html">Página 2</a>
+
+    <button onclick="Omnize()">ClickMe</button>
+    <script type="text/javascript">
+      function Omnize() {
+        if(document.getElementById('omn-container') == null) {
+          var JSLink = location.protocol+'//widget.omnize.com';
+          var JSElement = document.createElement('script');
+
+          JSElement.async=!0;
+          JSElement.charset='UTF-8';
+          JSElement.src=JSLink;
+          JSElement.onload=OnceLoaded;
+
+          document.getElementsByTagName('body')[0].appendChild(JSElement);
+
+          function OnceLoaded(){
+            wOmz.init({id:69});
+          }
+        }
+      }
+    </script>
+
+</body>
+</html>
