@@ -18,6 +18,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <a href="./teste2.html">Página 2</a>
 
+    <h1>Teste sem github</h1>
+
     <button onclick="Omnize()">ClickMe</button><br>
     <button class="maximizar1">Maximizar1</button><br>
     <button onclick="maximizar2()">Maximizar2</button>
@@ -42,16 +44,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       }
 
-      $('.omnize').click(function(e){
-            e.preventDefault();
-            if( $('.omn-launcher-open').length )
-                $('.omn-launcher-open *').click();
+      $('.maximizar1').click(function(e){
+          document.getElementById('launcherOpen').click()
         })
 
       function maximizar2(){
-          if( $('.wid-header-action-maximize').length )
-          $('.wid-header-action-maximize *').click();
-        }
+        document.getElementById('launcherOpen').click()
+      }
+
     </script>
 
 </body>
