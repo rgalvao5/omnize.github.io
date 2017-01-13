@@ -18,7 +18,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <a href="./teste2.html">Página 2</a>
 
-    <button onclick="Omnize()">ClickMe</button>
+    <button onclick="Omnize()">ClickMe</button><br>
+    <button onclick="maximizar1()">Maximizar1</button><br>
+    <button onclick="maximizar2()">Maximizar2</button>
+
     <script type="text/javascript">
       function Omnize() {
         if(document.getElementById('omn-container') == null) {
@@ -37,6 +40,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           }
         }
       }
+
+      function maximizar1(){
+            if( $('.wid-header-action-maximize').length )
+                $('.wid-header-action-maximize *').click();
+      }
+
+      function maximizar2(){
+        preventDefault();
+          if( $('.wid-header-action-maximize').length )
+          $('.wid-header-action-maximize *').click();
+        }
     </script>
 
 </body>
