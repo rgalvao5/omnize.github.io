@@ -19,7 +19,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="./teste2.html">Página 2</a>
 
     <button onclick="Omnize()">ClickMe</button><br>
-    <button onclick="maximizar1()">Maximizar1</button><br>
+    <button class="maximizar1">Maximizar1</button><br>
     <button onclick="maximizar2()">Maximizar2</button>
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -42,10 +42,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       }
 
-      function maximizar1(){
+      $('.omnize').click(function(e){
+            e.preventDefault();
             if( $('.wid-header-action-maximize').length )
                 $('.wid-header-action-maximize *').click();
-      }
+        })
 
       function maximizar2(){
           if( $('.wid-header-action-maximize').length )
