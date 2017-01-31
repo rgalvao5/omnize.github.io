@@ -12,7 +12,7 @@
       var $button = document.getElementById('init');
 
       $button.addEventListener('click', function() {
-        var JSLink='//s3.amazonaws.com/omz-widget-dev/js/mobile.js',
+        var JSLink='http://localhost:8008/js/mobile.js',
             JSElement=document.createElement('script');
 
         JSElement.async=!0;
@@ -24,7 +24,7 @@
           wOmz.init({
             id: 1392,
             callInfo: {
-              channel: 'chat',
+              channel: 'voice',
               department: 'Suporte',
               name: 'Rodrigo',
               email: 'rodrigo_oliveira@omnize.com',
