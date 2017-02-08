@@ -6,27 +6,19 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
   </head>
   <body>
-    <button id="init">Iniciar chat</button>
-    <script type="text/javascript">
-      var $init = document.getElementById('init');
-
-      $init.addEventListener('click', function() {
-        var JSLink = 'https://s3.amazonaws.com/omz-widget-dev/js/widget.js';
-        var JSElement = document.createElement('script');
-
-        JSElement.async=!0;
-        JSElement.charset='UTF-8';
-        JSElement.src=JSLink;
-        JSElement.onload=OnceLoaded;
-        document.getElementsByTagName('body')[0].appendChild(JSElement);
-
-        function OnceLoaded() {
-          wOmz.init({id:1392});
-          wOmz.UTIL.maximize();
-          wOmz.UTIL.initCall('CHAT');
-        }
-      });
-    </script>
+   <!-- Início do script Omnize --> 
+<script>document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//widget.omnize.com',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({
+            id: 6,
+            callInfo: {
+              channel: '',
+              department: 'Atendimento',
+              name: 'Leonardo',
+              email: 'leonardo@coddera.com',
+              phone: '1535115116',
+              cpf: '41998055833'
+            }
+          });}},false);</script> 
+<!-- Fim do script Omnize -->
   </body>
 </html>
 
