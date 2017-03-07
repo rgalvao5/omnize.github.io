@@ -18,12 +18,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <a href="./teste2.html">Página 2</a>
 
-    <h1>Teste sem github</h1>
-
     <button onclick="Omnize()">ClickMe</button><br>
-    <button class="maximizar1">Maximizar1</button><br>
-    <button onclick="maximizar2()">Maximizar2</button>
-
+    <button id="maximizar">Maximizar</button><br>
+    <button onclick="maximizar">Maximizar 2</button><br>
+                     
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript">
       function Omnize() {
@@ -44,13 +42,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
       }
 
-      $('.maximizar1').click(function(e){
-          document.getElementById('launcherOpen').click()
+      $('.maximizar').click(function(e){
+          document.getElementById('actionMax').click()
         })
-
-      function maximizar2(){
-        document.getElementById('launcherOpen').click()
-      }
 
     </script>
 
