@@ -10,8 +10,8 @@
     <h4> Usando widget develop </h4>
 
     <button onclick="Omnize()">ClickMe</button><br>
-    <button id="maximizar">Maximizar</button><br>
-    <button onclick="maximizar">Maximizar 2</button><br>
+    <button class="maximizar">Maximizar</button><br>
+    <button onclick="maximizar2()">Maximizar 2</button><br>
                      
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript">
@@ -36,6 +36,10 @@
       $('.maximizar').click(function(e){
           document.getElementById('actionMax').click()
         })
+        
+      function maximizar2(){
+          document.getElementById('actionMax').click()
+      }
 
     </script>
 
