@@ -6,6 +6,8 @@
 <body>
 
     <a href="./teste2.html">Página 2</a>
+    
+    <h4> Usando widget develop </h4>
 
     <button onclick="Omnize()">ClickMe</button><br>
     <button id="maximizar">Maximizar</button><br>
@@ -15,7 +17,7 @@
     <script type="text/javascript">
       function Omnize() {
         if(document.getElementById('omn-container') == null) {
-          var JSLink = location.protocol+'//widget.omnize.com';
+          var JSLink = location.protocol+'//s3.amazonaws.com/omz-widget-dev/js/widget.js';
           var JSElement = document.createElement('script');
 
           JSElement.async=!0;
