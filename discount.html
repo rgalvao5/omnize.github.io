@@ -8,6 +8,7 @@ Pagina para cadastrar descontos no IUGU e no Postgres
       var valorMensal = 35;
     
       function sendPost(){
+        var l = document.getElementById("license").value;
         var p = document.getElementById("plan").value;
         var n = document.getElementById("name").value;
         var pr = document.getElementById("period").value;
@@ -16,7 +17,7 @@ Pagina para cadastrar descontos no IUGU e no Postgres
         
         var http = new XMLHttpRequest();
         var url = "https://ca1vsqktff.execute-api.us-east-1.amazonaws.com/prod/insertplans";
-        var params = "{\"plan\":\""+p+"\",\"name\":\""+n+"\",\"value\":\""+v+"\", \"intervalType\":\""+pr+"\"}";
+        var params = "{\"plan\":\""+p+"\",\"name\":\""+n+"\",\"value\":\""+v+"\", \"intervalType\":\""+pr+"\", \"license\":\""+l+"\"}";
         var auth = "{\"user\":\""+document.getElementById('user').value+"\",\"pass\":\""+document.getElementById('pass').value+"\"}";
         http.open("POST", url, true);
         http.setRequestHeader("Content-type", "application/json");
@@ -62,6 +63,10 @@ Pagina para cadastrar descontos no IUGU e no Postgres
     Período:<select id="period">
       <option value="ANNUALLY">Anual</option>
       <option value="MONTHLY">Mensal</option>
+    </select>
+    Licença:<select id="license">
+      <option value="Lite">Lite</option>
+      <option value="Social">Social</option>
     </select>
     <br/><br/>
 
