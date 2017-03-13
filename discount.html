@@ -4,9 +4,12 @@ Pagina para cadastrar descontos no IUGU e no Postgres
 <html>
   <head>
     <script>
-      var valorAnual = 29;
-      var valorMensal = 35;
-    
+//       var valorAnual = 29;
+//       var valorMensal = 35;
+
+      var value = {'LiteANNUALLY':29,'LiteMONTHLY':35,'SocialANNUALLY':39,'SocialMONTHLY':49};
+      
+      
       function sendPost(){
         var l = document.getElementById("license").value;
         var p = document.getElementById("plan").value;
@@ -37,12 +40,14 @@ Pagina para cadastrar descontos no IUGU e no Postgres
       function calcular(){
         
         var period = document.getElementById("period").value;
+        var license = document.getElementById("license").value;
         
         var d = parseInt(document.getElementById("discount").value);
-        var valor = valorMensal;
-        if(period=="ANNUALLY"){
-          valor = valorAnual;
-        }
+        var valor = value[(license+period)];
+//         var valor = valorMensal;
+//         if(period=="ANNUALLY"){
+//           valor = valorAnual;
+//         }
         
         if(d){
           document.getElementById("value").value = valor*((100-d)/100);
