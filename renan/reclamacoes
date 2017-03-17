@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
   </head>
   <body>
+   <a href="http://omnize.github.io/renan/logado.html">Depto - Atendimento</a>
    <!-- Início do script Omnize --> 
 <script>document.addEventListener('DOMContentLoaded',function(){var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({
             id: 69,
