@@ -11,7 +11,6 @@
 
     <button onclick="Omnize()">ClickMe</button><br>
     <button class="maximizar">Maximizar</button><br>
-    <button onclick="maximizar2()">Maximizar 2</button><br>
                      
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript">
@@ -32,22 +31,17 @@
           }
         }
       }
-
-      // método para abrir a widget antiga
-      $('.maximizar').click(function(e){
-          document.getElementById('actionMax').click()
-        })
         
-     // método para abrir o widget ovo
-      function maximizar2(){
+     // método para abrir o widget novo
+      function maximizar(){
           document.getElementById('omnizeLauncherOpen').click()
       }
 
     </script>
     
-    <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+    <script type="text/javascript" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js"></script>
     <script type="text/javascript">
-	    FreshWidget.init("", {"queryString": "&widgetType=popup", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Suporte", "buttonColor": "white", "buttonBg": "#6a0a12", "alignment": "4", "offset": "235px", "formHeight": "500px", "url": "https://omnize.freshdesk.com"} );
+	FreshWidget.init("", {"queryString": "&widgetType=popup&submitTitle=Abrir+chamado&submitThanks=Obrigado+pelo+contato%2C+voc%C3%AA+ser%C3%A1+respondido+no+per%C3%ADodo+de+um+dia+%C3%BAtil.", "utf8": "✓", "widgetType": "popup", "buttonType": "text", "buttonText": "Suporte", "buttonColor": "white", "buttonBg": "#E2001C", "alignment": "2", "offset": "600px", "submitThanks": "Obrigado pelo contato, você será respondido no período de um dia útil.", "formHeight": "600px", "url": "https://omnize.freshdesk.com"} );
     </script>
 
 </body>
