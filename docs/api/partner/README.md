@@ -17,11 +17,27 @@ With body:
     {
       token: 'j423j42jn3kj4n',
       agent: {
-        email: 'test@example.com',
+        email: 'test@example.com', // Email used to login
         name: 'Test Agent',
-        password: 'j2hk2j3h4kj23h4kjh2k34', // SHA256
+        password: 'j2hk2j3h4kj23h4kjh2k34', // Plain text signed as SHA256 hash
         account_id: 1111
       }
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [Object] // Created agent
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
     }
 
 #### Update Agent
@@ -36,8 +52,23 @@ With body:
       agent: {
         email: 'update@example.com',
         name: 'New Name',
-        password: 'j2hk2j3h4kj23h4kjh2k34' // SHA256
+        password: 'j2hk2j3h4kj23h4kjh2k34' // Plain text signed as SHA256 hash
       }
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "E-mail can be blank"
     }
 
 #### Create Account
@@ -59,6 +90,22 @@ With body:
       }
     }
 
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [Object] // Created account
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+
 #### Inactive Account
 Make HTTP request:
 
@@ -71,6 +118,21 @@ With body:
       account: {
         ativo: 0
       }
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
     }
 
 #### Active Account
@@ -87,6 +149,21 @@ With body:
       }
     }
 
+Response, success:
+
+    {
+      status: 200,
+      success: true
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+
 #### Update account licenses
 Make HTTP request:
 
@@ -99,8 +176,7 @@ With body:
       license_quantity: 5
     }
 
-#### Response
-If success, return body:
+Response, success:
 
     {
       status: 200,
@@ -143,7 +219,7 @@ Body:
 
     {
       "action": "loginPartner",
-      "username":"r0302851@gmail.com", // Agent email
+      "username":"user@example.org", // Agent email
       "token":"B4cPxMMVteyoqCk6UUsK" // Partner token
     }
 
