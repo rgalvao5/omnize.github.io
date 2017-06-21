@@ -29,7 +29,25 @@ Response, success:
     {
       status: 200,
       success: true,
-      data: [Object] // Created agent
+      data: {
+        id: 12153,
+        name: "New Agent",
+        password: nil,
+        administrator: "NAO",
+        email: "agent@example.com",
+        ativo: 1,
+        photo: nil,
+        subscriber_id: nil,
+        account_id: 3373,
+        date_creation: "2017-06-20 20:24:51",
+        change_date: "2017-06-20 20:24:51",
+        user_creation: nil,
+        user_change: nil,
+        version_register: 0,
+        register_mobile_id: nil,
+        photo_expired_date: nil,
+        bucket_conf: nil
+      }
     }
 
 In case of errors:
@@ -95,7 +113,41 @@ Response, success:
     {
       status: 200,
       success: true,
-      data: [Object] // Created account
+      data: {
+        id: 4931,
+        name: nil,
+        razao_social: nil,
+        inscricao_estadual: nil,
+        cpfcnpj: nil,
+        endereco: nil,
+        bairro: nil,
+        cidade: nil,
+        estado: nil,
+        telefone: "(11) 98877-6655",
+        telefone1: nil,
+        email: "test@example.org",
+        main_contact: "Test Account",
+        iugu_id: nil,
+        validate_hash: true,
+        subscriber_id: nil,
+        domain_id: 4926,
+        ativo: 1,
+        version_register: 0,
+        user_creation: nil,
+        date_creation: "2017-06-02 19:24:00",
+        user_change: nil,
+        change_date: "2017-06-02 19:24:00",
+        cep: nil,
+        user_last_access: nil,
+        date_last_access: nil,
+        region_id: 36,
+        segment_id: 1,
+        url: "www.test.com",
+        whatsapp: nil,
+        token: nil,
+        partner_id: 1,
+        facelift: true
+      }
     }
 
 In case of errors:
