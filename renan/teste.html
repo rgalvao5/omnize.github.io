@@ -27,7 +27,17 @@
           document.getElementsByTagName('body')[0].appendChild(JSElement);
 
           function OnceLoaded(){
-            wOmz.init({id:69});
+            wOmz.init({
+	      id: 69,
+              callInfo: {
+                channel: 'CHAT',
+                department: 'Atendimento',
+                name: 'Usuário Teste',
+                email: 'usuario@teste.com',
+                phone: '1135008364',
+                cpf: '123.456.789-00'
+              }
+	    });
           }
         }
       }
