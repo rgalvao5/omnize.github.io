@@ -21,11 +21,19 @@ iframe {height:100%;width:100%}
 <body>
 <table>
     <tr><td class="content">
-        <iframe src="http://www.omnize.com.br/" frameborder="0"></iframe></td></tr>
+        <iframe id="custpage" src="http://www.omnize.com.br/" frameborder="0"></iframe></td></tr>
 </table>
 </body>
 <script>
-var cust_id = window.location.hash.slice(1, window.location.hash.length);
+var param = window.location.hash.slice(1, window.location.hash.length).split('|');
+
+var cust_id = param[0];
+var custpage = "";
+if (param.length > 1) {
+   custpage = param[1];
+   document.getElementById('custPage').setAttribute('src', custpage);
+}
+
 if ((cust_id == undefined) || (cust_id == null) || (cust_id == "")) cust_id = 1;
 var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({id:cust_id});}
   </script>
