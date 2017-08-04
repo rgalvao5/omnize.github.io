@@ -1,11 +1,13 @@
 ## ClientApi REST
-To get access token and set webhook url, access:
+To get access token and set webhook url to receive, access:
 
     https://login.beta.omnize.com.br
 
 Go to:
 
-    Menu > Settings > Integrations > ClientSDK > Generate Token
+    Menu > Settings > Integrations > ClientSDK 
+    
+Click on 'Generate Token' to obtain a new one, after that set the 'Webhook URL' to receive the triggers events.  
 
 
 #### Start interaction
