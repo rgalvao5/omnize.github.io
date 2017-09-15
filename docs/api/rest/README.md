@@ -9,11 +9,19 @@ Go to:
     
 Click on 'Generate Token' to obtain a new one, after that set the 'Webhook URL' to receive the triggers events.  
 
+#### Get Departments
+Make HTTP request:
 
+    POST http://clientapi.omnize.com:8080/api/rest/v1
+
+With body:
+
+    {"token": "TU3J0....", "type": "info", "content":"departments", "clientId": 123}
+   
 #### Start interaction
 Make HTTP request:
 
-    POST http://clientapi.omnize.com/api/rest/v1
+    POST http://clientapi.omnize.com:8080/api/rest/v1
 
 With body:
 
@@ -32,7 +40,7 @@ With body:
 #### Send message
 Make HTTP request:
 
-    POST http://clientapi.omnize.com/api/rest/v1
+    POST http://clientapi.omnize.com:8080/api/rest/v1
 
 With body:
 
@@ -47,7 +55,7 @@ With body:
 #### Notify when client typing      
 Make HTTP request:
 
-    POST http://clientapi.omnize.com/api/rest/v1
+    POST http://clientapi.omnize.com:8080/api/rest/v1
 
 With body:
 
@@ -62,7 +70,7 @@ With body:
 #### Notify when client stop typing
 Make HTTP request:
 
-    POST http://clientapi.omnize.com/api/rest/v1
+    POST http://clientapi.omnize.com:8080/api/rest/v1
 
 With body:
 
@@ -77,7 +85,7 @@ With body:
 #### Finish interaction
 Make HTTP request:
 
-    POST http://clientapi.omnize.com/api/rest/v1
+    POST http://clientapi.omnize.com:8080/api/rest/v1
 
 With body:
 
