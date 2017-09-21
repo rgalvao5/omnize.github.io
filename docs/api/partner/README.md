@@ -285,4 +285,4 @@ Response:
 
 Link to login, with returned token:
 
-    https://login.beta.omnize.com.br/mirror?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVaRp5D0e3
+    https://login.omnize.com.br?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVaRp5D0e3
