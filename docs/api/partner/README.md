@@ -286,3 +286,247 @@ Response:
 Link to login, with returned token:
 
     https://login.omnize.com.br?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVaRp5D0e3
+    
+    
+## Manage Departments
+#### Create
+Make HTTP request:
+
+    POST http://partner.omnize.com/api/v1/departments
+
+With body:
+
+    {
+      token: 'hj4h2k3h4k23',
+      department: { 
+        account_id: 1, 
+        name: "New Department", 
+        description: "A new created department",
+        ativo: 1,
+        channels: ["chat","video","audio"]
+      }
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [createdObject]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+
+#### Update
+Make HTTP request:
+
+    PUT http://partner.omnize.com/api/v1/departments/:id
+
+With body:
+
+    {
+      token: 'hj4h2k3h4k23',
+      department: { 
+        name: "New Department Name", 
+        description: "New department description",
+        ativo: 0
+      }
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [updatedObject]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+    
+#### Retrieve all
+Make HTTP request:
+
+    GET http://partner.omnize.com/api/v1/departments?token=hj4h2k3h4k23&account_id=1
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfDepartments]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+    
+#### Retrieve all channels
+Make HTTP request:
+
+    GET http://partner.omnize.com/api/v1/departments/:id/channels?token=hj4h2k3h4k23
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfChannels]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+    
+#### Retrieve all agents
+Make HTTP request:
+
+    GET http://partner.omnize.com/api/v1/departments/:id/agents?token=hj4h2k3h4k23
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfAgents]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+    
+#### Add agents
+Make HTTP request:
+
+    POST http://partner.omnize.com/api/v1/departments/:id/add_agents
+    
+With body:
+
+    { 
+      token: "B4cPxMMVteyoqCk6UUsK", 
+      agents: ["123","456"]
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfAgents]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+    
+#### Remove agents
+Make HTTP request:
+
+    POST http://partner.omnize.com/api/v1/departments/:id/remove_agents
+    
+With body:
+
+    { 
+      token: "B4cPxMMVteyoqCk6UUsK", 
+      agents: ["123","456"]
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfAgents]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+
+#### Add channels
+Make HTTP request:
+
+    POST http://partner.omnize.com/api/v1/departments/:id/add_channels
+    
+With body:
+
+    { 
+      token: "B4cPxMMVteyoqCk6UUsK", 
+      channels: ["audio"]
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfChannels]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+    
+#### Remove channels
+Make HTTP request:
+
+    POST http://partner.omnize.com/api/v1/departments/:id/remove_channels
+    
+With body:
+
+    { 
+      token: "B4cPxMMVteyoqCk6UUsK", 
+      channels: ["video"]
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfChannels]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+    
