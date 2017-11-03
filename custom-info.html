@@ -8,6 +8,8 @@
   <body>
     <button id="init">Iniciar widget</button>
 
+    <button id="init2">Iniciar widget 2</button>
+
     <script>
       var $button = document.getElementById('init');
 
@@ -30,6 +32,33 @@
               email: 'leonardo@coddera.com',
               phone: '1535115116',
               cpf: '41998055833'
+            }
+          });
+        }
+      });
+      
+      
+      var $button2 = document.getElementById('init2');
+
+      $button2.addEventListener('click', function() {
+        var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',
+            JSElement=document.createElement('script');
+
+        JSElement.async=!0;
+        JSElement.charset='UTF-8';
+        JSElement.src=JSLink;
+        JSElement.onload=OnceLoaded;
+        document.getElementsByTagName('body')[0].appendChild(JSElement);
+        function OnceLoaded(){
+          wOmz.init({
+            id: 6,
+            callInfo: {
+              channel: 'chat',
+              department: 'Atendimento',
+              name: 'Ricardo',
+              email: 'rgalvao@coddera.com',
+              phone: '112223333',
+              cpf: ''
             }
           });
         }
