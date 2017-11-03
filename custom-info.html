@@ -9,12 +9,14 @@
     <button id="init">Iniciar widget</button>
 
     <button id="init2">Iniciar widget 2</button>
+    
+    <h1>v.1.0.1</h1>
 
     <script>
       var $button = document.getElementById('init');
 
       $button.addEventListener('click', function() {
-        var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',
+        var JSLink='http://localhost:8008/js/widget.js',
             JSElement=document.createElement('script');
 
         JSElement.async=!0;
@@ -41,7 +43,7 @@
       var $button2 = document.getElementById('init2');
 
       $button2.addEventListener('click', function() {
-        var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',
+        var JSLink='http://localhost:8008/js/widget.js',
             JSElement=document.createElement('script');
 
         JSElement.async=!0;
