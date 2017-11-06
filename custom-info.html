@@ -10,6 +10,10 @@
 
     <button id="init2">Iniciar widget 2</button>
     
+    <button id="init3">Widget Renan</button>
+    
+    <a href="http://omnize.github.io/renan/suporte.html">Página de Teste Renan</a>
+    
     <h1>v.1.0.1</h1>
 
     <script>
@@ -38,8 +42,7 @@
           });
         }
       });
-      
-      
+            
       var $button2 = document.getElementById('init2');
 
       $button2.addEventListener('click', function() {
@@ -59,6 +62,32 @@
               department: 'Atendimento',
               name: 'Ricardo',
               email: 'rgalvao@coddera.com',
+              phone: '112223333',
+              cpf: ''
+            }
+          });
+        }
+      });
+      
+      var $button3 = document.getElementById('init3');
+
+      $button3.addEventListener('click', function() {
+        var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',
+            JSElement=document.createElement('script');
+
+        JSElement.async=!0;
+        JSElement.charset='UTF-8';
+        JSElement.src=JSLink;
+        JSElement.onload=OnceLoaded;
+        document.getElementsByTagName('body')[0].appendChild(JSElement);
+        function OnceLoaded(){
+          wOmz.init({
+            id: 69,
+            callInfo: {
+              channel: 'chat',
+              department: 'Atendimento',
+              name: 'Reenan 1',
+              email: 'renan@coddera.com',
               phone: '112223333',
               cpf: ''
             }
