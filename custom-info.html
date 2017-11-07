@@ -14,13 +14,13 @@
     
     <a href="http://omnize.github.io/renan/reclamacoes.html">Página de Teste Renan</a>
     
-    <h1>v.1.0.1</h1>
+    <h1>v.1.0.5</h1>
 
     <script>
       var $button = document.getElementById('init');
 
       $button.addEventListener('click', function() {
-        var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',
+        var JSLink='http://localhost:8008/js/widget.js',
             JSElement=document.createElement('script');
 
         JSElement.async=!0;
@@ -30,15 +30,12 @@
         document.getElementsByTagName('body')[0].appendChild(JSElement);
         function OnceLoaded(){
           wOmz.init({
-            id: 6,
+            id: 6301,
             callInfo: {
-              channel: 'chat',
-              department: 'Atendimento',
-              name: 'Leonardo',
-              email: 'leonardo@coddera.com',
-              phone: '1535115116',
-              cpf: '41998055833'
-            }
+              name: 'Ricardo',
+              cpf: '99001232'
+            },
+            basecolor: "00BB00"
           });
         }
       });
@@ -46,7 +43,7 @@
       var $button2 = document.getElementById('init2');
 
       $button2.addEventListener('click', function() {
-        var JSLink='//s3.amazonaws.com/omz-widget-dev/js/widget.js',
+        var JSLink='http://localhost:8008/js/widget.js',
             JSElement=document.createElement('script');
 
         JSElement.async=!0;
