@@ -16,6 +16,7 @@ With body:
 
     {
       token: 'j423j42jn3kj4n',
+      "profile": "ADMIN", // "ADMIN" or "AGENT"
       agent: {
         email: 'test@example.com', // Email used to login
         name: 'Test Agent',
@@ -23,6 +24,8 @@ With body:
         account_id: 1111
       }
     }
+    
+Without parameter profile, will create a AGENT profile
 
 Response, success:
 
