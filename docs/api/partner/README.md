@@ -16,7 +16,7 @@ With body:
 
     {
       token: 'j423j42jn3kj4n',
-      "profile": "ADMIN", // "ADMIN" or "AGENT"
+      profile: 'ADMIN', // 'ADMIN' or 'AGENT'
       agent: {
         email: 'test@example.com', // Email used to login
         name: 'Test Agent',
