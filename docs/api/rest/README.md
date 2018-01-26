@@ -1,7 +1,7 @@
 ## ClientApi REST
 To get access token and set webhook url to receive, access:
 
-    https://beta.omnize.com.br
+    https://login.omnize.com.br
 
 Go to:
 
