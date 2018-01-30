@@ -245,6 +245,33 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
+    
+#### Update account licenses code
+Make HTTP request:
+
+    PUT http://partner.omnize.com/api/v1/accounts/:id
+
+With body:
+
+    {
+      token: 'hj4h2k3h4k23',
+      license_code: 'PARTNER_X'
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
 
 #### Widget
 Widget-code, set proper account_id at 'wOmz.init({id:#{id}})':
