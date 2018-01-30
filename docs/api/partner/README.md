@@ -91,6 +91,28 @@ In case of errors:
       success: false,
       errors: "E-mail can be blank"
     }
+    
+#### Retrieve all agents
+Make HTTP request:
+
+    GET http://partner.omnize.com/api/v1/agents?token=hj4h2k3h4k23&account_id=1
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [listOfAgents]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+
 
 #### Create Account
 Make HTTP request:
@@ -317,7 +339,7 @@ Link to login, with returned token:
 
     https://login.omnize.com.br?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVaRp5D0e3
     
-    
+
 ## Manage Departments
 #### Create
 Make HTTP request:
@@ -427,7 +449,7 @@ In case of errors:
       errors: "Invalid token"
     }
     
-#### Retrieve all agents
+#### Retrieve all agents on a department
 Make HTTP request:
 
     GET http://partner.omnize.com/api/v1/departments/:id/agents?token=hj4h2k3h4k23
