@@ -12,7 +12,7 @@ Click on 'Generate Token' to obtain a new one, after that set the 'Webhook URL' 
 #### Get Departments
 Make HTTP request:
 
-    POST http://clientapi.omnize.com:8080/client-gateway/api/rest/v1
+    POST https://api.omnize.com/client-gateway/api/rest/v1
 
 With body:
 
@@ -21,7 +21,7 @@ With body:
 #### Start interaction
 Make HTTP request:
 
-    POST http://clientapi.omnize.com:8080/client-gateway/api/rest/v1
+    POST https://api.omnize.com/client-gateway/api/rest/v1
 
 With body:
 
@@ -40,7 +40,7 @@ With body:
 #### Send message
 Make HTTP request:
 
-    POST http://clientapi.omnize.com:8080/client-gateway/api/rest/v1
+    POST https://api.omnize.com/client-gateway/api/rest/v1
 
 With body:
 
@@ -55,7 +55,7 @@ With body:
 #### Notify when client typing      
 Make HTTP request:
 
-    POST http://clientapi.omnize.com:8080/client-gateway/api/rest/v1
+    POST https://api.omnize.com/client-gateway/api/rest/v1
 
 With body:
 
@@ -70,7 +70,7 @@ With body:
 #### Notify when client stop typing
 Make HTTP request:
 
-    POST http://clientapi.omnize.com:8080/client-gateway/api/rest/v1
+    POST https://api.omnize.com/client-gateway/api/rest/v1
 
 With body:
 
@@ -85,7 +85,7 @@ With body:
 #### Finish interaction
 Make HTTP request:
 
-    POST http://clientapi.omnize.com:8080/client-gateway/api/rest/v1
+    POST https://api.omnize.com/client-gateway/api/rest/v1
 
 With body:
 
