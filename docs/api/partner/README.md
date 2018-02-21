@@ -241,6 +241,34 @@ In case of errors:
       errors: "Invalid token"
     }
 
+
+#### Delete Account
+Make HTTP request:
+
+    DELETE http://partner.omnize.com/api/v1/accounts/:id
+
+With body:
+
+    {
+      token: 'hj4h2k3h4k23'
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      message: "Account deleted successfully"
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Invalid token"
+    }
+
 #### Update account licenses
 Make HTTP request:
 
