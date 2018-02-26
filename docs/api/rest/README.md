@@ -31,6 +31,7 @@ With body:
       "content": "init",
       "departmentId": "1",
       "clientId": "12",
+      "botId": "1111", // Optional
       "customerName": "Joao",
       "customerEmail": "joao@example.com",
       "customerPhone": "11988776655",
@@ -104,40 +105,46 @@ With body:
 
     {
       "status": "accepted",
-      "clientId": "12"
+      "clientId": "12",
+      "botId": "1111" // If provided on INIT
     }
 
 #### In case of unavailable agents:
 
     {
       "status": "unavailable",
-      "clientId": "12"
+      "clientId": "12",
+      "botId": "1111" // If provided on INIT
     }
 
 ####  Agent finish interaction:
 
     {
       "status": "finish",
-      "clientId": "12"
+      "clientId": "12",
+      "botId": "1111" // If provided on INIT
     }
 
 ####  Agent typing:
 
     {
       "status": "typing",
-      "clientId": "12"
+      "clientId": "12",
+      "botId": "1111" // If provided on INIT
     }
 
 ####  Agent stop typing:
 
     {
       "status": "cleared",
-      "clientId": "12"
+      "clientId": "12",
+      "botId": "1111" // If provided on INIT
     }
 
 #### Agent new message:
 
     {
       "message": "New agent message!",
-      "clientId": "12"
+      "clientId": "12",
+      "botId": "1111" // If provided on INIT
     }
