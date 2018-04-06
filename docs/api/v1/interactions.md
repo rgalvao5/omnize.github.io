@@ -29,6 +29,7 @@ With body:
 
     {
       "token": "j4hl2kjh34kh2k3jh4...",
+      "media_type": "text",
       "department_id": "1",
       "customer": { // Optional
         "name": "Joao",
