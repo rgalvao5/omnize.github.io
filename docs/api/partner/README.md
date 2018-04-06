@@ -24,7 +24,7 @@ With body:
         account_id: 1111
       }
     }
-    
+
 Without parameter profile, will create a AGENT profile
 
 Response, success:
@@ -91,7 +91,26 @@ In case of errors:
       success: false,
       errors: "E-mail can be blank"
     }
-    
+
+#### Update Agent Profile
+Make a HTTP request:
+
+    PUT http://partner.omnize.com/api/v1/agents/:id/profile
+
+With body:
+
+    {
+      token: 'j423j42jn3kj4n',
+      profile: 'AGENT'
+    }
+
+Response, success:
+
+    {
+      status: 200,
+      success: true
+    }
+
 #### Retrieve all agents
 Make HTTP request:
 
@@ -295,7 +314,7 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
 #### Update account licenses code
 Make HTTP request:
 
@@ -366,7 +385,7 @@ Response:
 Link to login, with returned token:
 
     https://login.omnize.com.br?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVaRp5D0e3
-    
+
 
 ## Manage Departments
 #### Create
@@ -378,9 +397,9 @@ With body:
 
     {
       token: 'hj4h2k3h4k23',
-      department: { 
-        account_id: 1, 
-        name: "New Department", 
+      department: {
+        account_id: 1,
+        name: "New Department",
         description: "A new created department",
         ativo: 1,
         channels: ["chat","video","audio"]
@@ -412,8 +431,8 @@ With body:
 
     {
       token: 'hj4h2k3h4k23',
-      department: { 
-        name: "New Department Name", 
+      department: {
+        name: "New Department Name",
         description: "New department description",
         ativo: 0
       }
@@ -434,7 +453,7 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
 #### Retrieve all
 Make HTTP request:
 
@@ -455,7 +474,7 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
 #### Retrieve all channels
 Make HTTP request:
 
@@ -476,7 +495,7 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
 #### Retrieve all agents on a department
 Make HTTP request:
 
@@ -497,16 +516,16 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
 #### Add agents
 Make HTTP request:
 
     POST http://partner.omnize.com/api/v1/departments/:id/add_agents
-    
+
 With body:
 
-    { 
-      token: "B4cPxMMVteyoqCk6UUsK", 
+    {
+      token: "B4cPxMMVteyoqCk6UUsK",
       agents: ["123","456"]
     }
 
@@ -525,16 +544,16 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
 #### Remove agents
 Make HTTP request:
 
     POST http://partner.omnize.com/api/v1/departments/:id/remove_agents
-    
+
 With body:
 
-    { 
-      token: "B4cPxMMVteyoqCk6UUsK", 
+    {
+      token: "B4cPxMMVteyoqCk6UUsK",
       agents: ["123","456"]
     }
 
@@ -558,11 +577,11 @@ In case of errors:
 Make HTTP request:
 
     POST http://partner.omnize.com/api/v1/departments/:id/add_channels
-    
+
 With body:
 
-    { 
-      token: "B4cPxMMVteyoqCk6UUsK", 
+    {
+      token: "B4cPxMMVteyoqCk6UUsK",
       channels: ["audio"]
     }
 
@@ -581,16 +600,16 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
 #### Remove channels
 Make HTTP request:
 
     POST http://partner.omnize.com/api/v1/departments/:id/remove_channels
-    
+
 With body:
 
-    { 
-      token: "B4cPxMMVteyoqCk6UUsK", 
+    {
+      token: "B4cPxMMVteyoqCk6UUsK",
       channels: ["video"]
     }
 
@@ -609,4 +628,4 @@ In case of errors:
       success: false,
       errors: "Invalid token"
     }
-    
+
