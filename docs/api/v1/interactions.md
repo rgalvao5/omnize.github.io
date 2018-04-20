@@ -40,7 +40,8 @@ With body:
       "extra" : { // Optional, returned on webhook
         "clientId": "12",
         "botId": "1111"
-      }
+      },
+	  "external_history": "chathistory.example.org" // Optional
     }
 
 Response:
