@@ -31,8 +31,8 @@ With body:
     {
       "token": "j23hk4j2h3kj4h...",
       "content": "Test message",
-      "content_type": "image/png", // Optional, default 'text'
-      "url": ".....", // Optional, used if content_type is different of 'text'
+      "content_type": "image/png", // Optional, used to send media files. Default 'text' 
+      "url": ".....", // Optional, link for the media source used if content_type is different of 'text'
       "department_id": 1,
       "customer": {
         "name": "abcd1234" //Optional
