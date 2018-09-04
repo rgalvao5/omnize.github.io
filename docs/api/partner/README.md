@@ -21,6 +21,7 @@ With body:
         email: 'test@example.com', // Email used to login
         name: 'Test Agent',
         password: 'j2hk2j3h4kj23h4kjh2k34', // Plain text signed as SHA256 hash
+        text_limit: 7, // optional 
         account_id: 1111
       }
     }
@@ -73,6 +74,7 @@ With body:
       agent: {
         email: 'update@example.com',
         name: 'New Name',
+        text_limit: 7, // optional 
         password: 'j2hk2j3h4kj23h4kjh2k34' // Plain text signed as SHA256 hash
       }
     }
