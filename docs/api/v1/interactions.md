@@ -52,6 +52,24 @@ Response:
         "interaction_hash": "322e458c-540c-4c11-ab5c-d38d39f57213"
       }
     }
+    
+
+#### External History
+Endpoint that returns a JSON:
+
+    {
+      "messages":[
+	{
+	  "time":"2019-03-14 09:49:11",
+	  "direction":"CLIENT",
+	  "content":"test"
+	},{
+	  "time":"2019-03-14 09:49:01",
+	  "direction":"AGENT",
+	  "content":"test"
+	}
+      ]
+    }
 
 #### Send message
 Make HTTP request:
