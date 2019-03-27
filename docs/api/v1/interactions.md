@@ -59,15 +59,15 @@ Endpoint that returns a JSON:
 
     {
       "messages":[
-	{
-	  "time":"2019-03-14 09:49:11",
-	  "direction":"CLIENT",
-	  "content":"test"
-	},{
-	  "time":"2019-03-14 09:49:01",
-	  "direction":"AGENT",
-	  "content":"test"
-	}
+        {
+          "time":"2019-03-14 09:49:11",
+          "direction":"CLIENT",
+          "content":"test"
+        },{
+          "time":"2019-03-14 09:49:01",
+          "direction":"AGENT",
+          "content":"test"
+        }
       ]
     }
 
