@@ -119,5 +119,18 @@ With body:
       "message": {
         "content": "Message",
         "type": "text"
+      },
+      "agent": { 
+        "id": 123, 
+	"name": "Agent" 
       }
+    }
+    
+#### Agent transfer interaction to department
+
+    { 
+      "external_id": "abcd1234", 
+      "interaction_hash": "322e458c-540c-4c11-ab5c-d38d39f57213", 
+      "state": "transferred", 
+      "department_id": "1545" 
     }
