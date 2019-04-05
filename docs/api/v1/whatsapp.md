@@ -24,7 +24,7 @@ Make HTTP request:
 #### Send message
 Make HTTP request:
 
-    POST https://services.api.omnize.com.br/api/v1/whatsapp
+    POST https://services.omnize.com.br/api/v1/whatsapp
 
 With body:
 
