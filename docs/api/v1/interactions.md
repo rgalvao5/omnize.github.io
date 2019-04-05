@@ -81,7 +81,8 @@ With body:
     {
       "token": "j23hk4j2h3kj4h...",
       "content": "Message",
-      "type": "text",
+      "type": "text", // "image/jpeg", "image/png", "video/mp4", "audio/ogg"
+      "url": "https://images.com/image.png", // Optional
     }
 
 Response:
