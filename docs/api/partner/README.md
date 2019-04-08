@@ -113,10 +113,21 @@ Response, success:
       success: true
     }
 
-#### Retrieve all agents
-Make HTTP request:
-
-    GET http://partner.omnize.com/api/v1/agents?token=hj4h2k3h4k23&account_id=1
+#### Retrieve agents
+  Accepted params:
+  ```
+  token: partner_token (required)
+  account_id: account_id (required)
+  column: order by column (id name email) default: id
+  direction: order by (desc asc) default: desc
+  page: pagination of agents (>=1) default: 1
+  limit: limit number of return agents default: 20
+  search: search by (id name or email)
+  ```
+  Make HTTP request:
+ ```
+    GET http://partner.omnize.com/api/v1/agents?token=hj4h2k3h4k23&account_id=1&search=test@gmail&column=name&direction=asc&page=1&limit=10
+```
 
 Response, success:
 
@@ -132,6 +143,50 @@ In case of errors:
       status: 200,
       success: false,
       errors: "Invalid token"
+    }
+
+#### Retrieve accounts
+  Accepted params:
+  ```
+  token: partner_token (required)
+  column: order by column (id name email main_contact) default: id
+  direction: order by (desc asc) default: desc
+  page: pagination of agents (>=1) default: 1
+  limit: limit number of return agents default: 20
+  search: search by (id name or email)
+  ```
+  Make HTTP request:
+  ```
+    GET http://partner.omnize.com/api/v1/accounts?token=hj4h2k3h4k23&search=test@gmail&column=name&direction=asc&page=1&limit=10
+```
+Response, success:
+
+    {
+      status: 200,
+      success: true,
+      data: [{
+            "id": 9949,
+            "name": "example",
+            "email": "example@omnize.com.br",
+            "main_contact": "omnize",
+            "url": "https://omnize.com.br",
+            "user_last_access": "someone",
+            "date_creation": "2018-07-30T13:46:16.652Z",
+            "change_date": "2018-07-30T13:46:16.652Z",
+            "webhook_url": "https://omnize.com.br/webhooks",
+            "deleted_at": null,
+            "phone": "0000-0000",
+            "ativo": 1, // It will be discontinued in future
+            "active": true // Boolean
+        }, ...]
+    }
+
+In case of errors:
+
+    {
+      status: 200,
+      success: false,
+      errors: "Error Message"
     }
 
 
