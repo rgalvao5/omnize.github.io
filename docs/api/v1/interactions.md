@@ -187,7 +187,7 @@ With body:
         "hash": "3110a5da-87c7-4f6d-a4ab-2b1ed5edfd46",
         "content": "Message",
         "type": "text",
-	"url": "http://..."
+        "url": "http://..."
       },
       "agent": {
         "id": 111,
