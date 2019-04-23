@@ -186,7 +186,12 @@ With body:
       "message": {
         "hash": "3110a5da-87c7-4f6d-a4ab-2b1ed5edfd46",
         "content": "Message",
-        "type": "text"
+        "type": "text",
+	"url": "http://..."
+      },
+      "agent": {
+        "id": 111,
+        "name": "Atendente"
       },
       "extra": {}
     }
