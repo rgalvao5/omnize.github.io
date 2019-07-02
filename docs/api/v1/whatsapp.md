@@ -13,18 +13,18 @@ Click on 'Generate Token' to obtain a new one, after that set the 'Webhook URL' 
 
     Omnize platform: https://homolog.app.omnize.com.br
 
-    Api endpoint: https://homolog.services.omnize.com.br
+    Api endpoint: https://homolog.core.omnize.com.br
 
 #### Get Departments
 Make HTTP request:
 
-    GET https://services.omnize.com.br/api/v1/departments?token=jh2kj3k12j3hk1j
+    GET https://core.omnize.com.br/api/v1/departments?token=jh2kj3k12j3hk1j
 
 
 #### Send message
 Make HTTP request:
 
-    POST https://services.omnize.com.br/api/v1/whatsapp
+    POST https://core.omnize.com.br/api/v1/whatsapp
 
 With body:
 
@@ -57,33 +57,6 @@ Response:
       }
     }
 
-#### Notify when client typing
-Make HTTP request:
-
-    PUT https://services.omnize.com.br/api/v1/whatsapp/typing
-
-With body:
-
-    {
-      "token": "j23hk4j2h3kj4h...",
-      "customer": {
-        "external_id": "abcd1234" //Required
-      }
-    }
-
-#### Notify when client stop typing
-Make HTTP request:
-
-    PUT https://services.omnize.com.br/api/v1/interactions/cleared
-
-With body:
-
-    {
-      "token": "j23hk4j2h3kj4h...",
-      "customer": {
-        "external_id": "abcd1234" //Required
-      }
-    }
 
 ## Triggers
 
