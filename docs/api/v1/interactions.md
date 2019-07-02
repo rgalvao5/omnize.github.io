@@ -13,17 +13,17 @@ Click on 'Generate Token' to obtain a new one, after that set the 'Webhook URL' 
 
     Omnize platform: https://homolog.app.omnize.com.br
 
-    Api endpoint: https://homolog.services.omnize.com.br
+    Api endpoint: https://homolog.core.omnize.com.br
 
 #### Get Departments
 Make HTTP request:
 
-    GET https://services.omnize.com.br/api/v1/departments?token=jh2kj3k12j3hk1j
+    GET https://core.omnize.com.br/api/v1/departments?token=jh2kj3k12j3hk1j
 
 #### Start interaction
 Make HTTP request:
 
-    POST https://services.omnize.com.br/api/v1/interactions
+    POST https://core.omnize.com.br/api/v1/interactions
 
 With body:
 
@@ -74,7 +74,7 @@ Endpoint that returns a JSON:
 #### Send message
 Make HTTP request:
 
-    POST https://services.api.omnize.com.br/api/v1/interactions/:interaction_hash/messages
+    POST https://core.omnize.com.br/api/v1/interactions/:interaction_hash/messages
 
 With body:
 
@@ -97,7 +97,7 @@ Response:
 #### Notify when client typing
 Make HTTP request:
 
-    PUT https://services.omnize.com.br/api/v1/interactions/:interaction_hash/typing
+    PUT https://core.omnize.com.br/api/v1/interactions/:interaction_hash/typing
 
 With body:
 
@@ -108,7 +108,7 @@ With body:
 #### Notify when client stop typing
 Make HTTP request:
 
-    PUT https://services.omnize.com.br/api/v1/interactions/:interaction_hash/cleared
+    PUT https://core.omnize.com.br/api/v1/interactions/:interaction_hash/cleared
 
 With body:
 
@@ -119,7 +119,7 @@ With body:
 #### Finish interaction
 Make HTTP request:
 
-    PUT https://services.omnize.com.br/api/v1/interactions/:interaction_hash/finish
+    PUT https://core.omnize.com.br/api/v1/interactions/:interaction_hash/finish
 
 With body:
 
