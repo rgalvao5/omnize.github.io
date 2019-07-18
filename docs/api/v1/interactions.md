@@ -18,7 +18,7 @@ Click on 'Generate Token' to obtain a new one, after that set the 'Webhook URL' 
 #### Get Departments
 Make HTTP request:
 
-    GET https://core.omnize.com.br/api/v1/departments?token=jh2kj3k12j3hk1j
+    GET https://services.omnize.com.br/api/v1/departments?token=jh2kj3k12j3hk1j
 
 #### Start interaction
 Make HTTP request:
