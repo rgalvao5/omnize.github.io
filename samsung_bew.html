@@ -1,9 +1,9 @@
 <html>
 <body>
 </body>
-   version 1.0.1
+   version 1.0.2
    <script>
        var cust_id = window.location.hash.slice(1, window.location.hash.length);
            if ((cust_id == undefined) || (cust_id == null) || (cust_id == "")) cust_id = 12276;
-      document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//omnichatwidget.zenvia.com/main.js',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){if(typeof(omzBao)!=='undefined'){omzBao.init({id:custid});}}},false);</script>
+      document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//omnichatwidget.zenvia.com/main.js',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){if(typeof(omzBao)!=='undefined'){omzBao.init({id:cust_id});}}},false);</script>
 </html>
